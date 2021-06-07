@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#D2F4EA"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/edtNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome"
+            android:inputType="textPersonName"
+            android:layout_margin="15dp"/>
+
+        <EditText
+            android:id="@+id/edtCelular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Celular"
+            android:inputType="phone"
+            android:layout_margin="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:layout_height="wrap_content"
+            android:background="#F4D2EC">
+
+
+            <RadioGroup
+                android:id="@+id/rdgSetor"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rdPessoal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Pessoal" />
+
+                <RadioButton
+                    android:id="@+id/rdTrabalho"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Trabalho" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edtReferencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:layout_margin="15dp"/>
+
+        <!--<EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:layout_margin="15dp"/> -->
+
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F413BD"
+            android:layout_gravity="center_horizontal"
+            android:text="Salvar"/>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="142dp"
+            android:layout_margin="15dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edtPesquisar"
+                android:layout_width="242dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:hint="Pesquisar por nome"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/btnPesquisar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="15dp"
+                android:backgroundTint="#F413BD"
+                android:text="P" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtResultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#170E13"
+            android:textSize="15dp"
+            android:layout_margin="15dp"
+            android:layout_gravity="center_horizontal" />
+            <!-- android:visibility="invisible" -->
+
+
+        <Button
+            android:id="@+id/btnExibir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp"
+            android:backgroundTint="#F413BD"
+            android:visibility="invisible"
+            android:text="Exibir Contatos" />
+
+    </LinearLayout>
+</ScrollView>
